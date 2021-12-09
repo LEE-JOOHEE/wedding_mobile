@@ -1,0 +1,224 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');/*메인01~04폰트*/
+@import url('https://fonts.googleapis.com/css?family=Orbitron');/*사진안에 글자폰트*/
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);/*한글폰트-한나체*/
+
+/*헤더 길이 물어 보기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+/* == 10. Horizontal menu Background == */
+
+/*====================
+	Color Scheme Begin
+=====================================================================
+====================================================================*/
+
+/* Menu bar background color */
+#navigation, 
+#nav li, 
+#nav li a{
+background: #555555;
+}
+
+/* Menu Item text color */
+#nav li a{
+color: #fff; 
+}
+
+/* Menu Item background/text color on hover */
+#nav li a:hover{
+background: #87ceeb; 
+color: #111;
+}
+
+/* Text Shadow */
+#nav li a, 
+#nav li a:hover{
+text-shadow: 0 1px 1px #333; 
+}
+
+ /*Search form colors 
+.searchform input, .searchform input:not(:focus){
+color:#B1B1B1;                                               search form text color default
+background: #fff;                                                search form background color default
+}
+.searchfield:focus{
+color: #000;                                                      search form text color after click 
+}*/
+
+/*=====================================================================
+=======================================================================
+	Color Scheme End
+====================*/
+
+#menu_div{
+clear: both;
+position: relative;
+top: 0;
+left: 0; z-index:1000;
+} /* Free space to top specialy for menu */
+
+#navigation {
+position:fixed;
+}
+
+#navigation, #menu_div {
+width: 100%;
+margin: 0 !important;
+padding: 0 !important;
+}
+
+#menu_div, #navigation, #menu, #nav{
+height: 45px; /* menu height */
+}
+
+#menu_div:hover,
+#navigation:hover,
+#nav li a:hover{
+opacity: 0.95;/* Menu transparency on mouse hover*/
+} 
+
+#menu_div,
+#navigation, 
+#nav li a, 
+#menu_div:not(:hover), 
+#navigation:not(:hover)
+{
+opacity: 0.8;/* Menu transparency on mouse out */
+}
+
+
+#menu {
+width: 100%;
+margin:0 auto; /*center the menu*/
+padding:0;
+position:relative;
+}
+
+#nav{
+width: 100%;
+margin:0;
+padding:0;
+position: relative;
+font-family:NanumBarunGothic;
+}
+
+#nav li a,#nav li {
+float:left;
+}
+
+#nav li {
+list-style:none;
+position:relative;
+}
+
+#nav li a {
+line-height: 45px;
+padding:0 1.6em;
+text-decoration:none;
+margin:0;
+font-size:12px;
+font-weight:700;
+text-transform:uppercase;
+}
+
+
+/*====================
+	Search form 
+====================*/
+
+/*.searchform {
+position: absolute;
+right: 15px;
+top: 6px;
+display: inline-block;
+zoom: 1;
+*display: inline;
+border: 0;
+padding: 0;
+}
+.searchform input {
+font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+.searchform .searchfield {
+height: 27px;
+line-height: 27px;
+padding-left: 10px;
+padding-right: 10px;
+width: 150px;
+border: 2px solid #333;
+outline: none;
+-webkit-border-radius: 2em;
+-moz-border-radius: 2em;
+border-radius: 2em;
+-moz-box-shadow: inset 1px 1px 2px #A1A1A1;
+-webkit-box-shadow: inset 1px 1px 2px #A1A1A1;
+box-shadow: inner 1px 1px 2px #A1A1A1;
+}
+
+.searchfield:focus{
+font-weight: 700;
+width: 220px;
+}
+
+.searchfield:not(:focus){
+width: 150px;
+}*/
+
+
+/*========================
+		Transitions
+========================*/
+
+#nav li a:hover{
+-webkit-transition-property:color, background; 
+-webkit-transition-duration: 0.5s, 0.5s; 
+-webkit-transition-timing-function: linear, ease-out;
+}
+
+.searchfield:focus,
+.searchfield:not(:focus){
+-webkit-transition-property:width; 
+-webkit-transition-duration: 0.5s, 0.5s; 
+-webkit-transition-timing-function: linear, ease-out;
+}
+
+#menu_div:hover,
+#navigation:hover, 
+#menu_div,
+#navigation, 
+#nav li a, 
+#menu_div:not(:hover), 
+#navigation:not(:hover)
+{
+-webkit-transition-property:opacity; 
+-webkit-transition-duration: 0.5s, 0.5s; /* duration in seconds */
+-webkit-transition-timing-function: linear, ease-out;
+} /* Menu transparency animation */
+
+@media screen and (max-width:479px) {
+
+    #menu_div {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin: 0px auto;
+    }
+
+    #menu {
+        width: 100%;
+        height: 40px;
+        right: 0px;
+    }
+
+        #menu li {
+            float: left;
+            width: 50%;
+        }
+
+        #menu a {
+            padding: 0px;
+            text-align: center;
+        }
+}
+
